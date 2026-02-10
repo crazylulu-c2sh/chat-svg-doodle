@@ -1,0 +1,157 @@
+body {
+  /* 종이 색상 - 약간 크림색 */
+  background: #f9f7f1;
+
+  /* 종이 질감 노이즈 */
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, .02) 2px,
+      rgba(0, 0, 0, .02) 4px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, .02) 2px,
+      rgba(0, 0, 0, .02) 4px);
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+
+  /* SVG 배경도 종이색 */
+  background: #fefdfb;
+
+  /* 종이 그림자 효과 */
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.05);
+
+  /* 둥근 모서리 */
+  border-radius: 4px;
+
+  /* 약간의 패딩 */
+  padding: 20px;
+}
+
+.pencil path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: url(#pencil);
+}
+
+/* 질감 선택 버튼 컨테이너 */
+.texture-controls {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.texture-btn {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.texture-btn:hover {
+  border-color: #888;
+  background: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+.texture-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.texture-btn.random {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.texture-btn.random:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.texture-btn.random.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* 낙서 선택 버튼 컨테이너 */
+.doodle-controls {
+  position: fixed;
+  top: 85px;
+  /* 질감 버튼 아래에 배치 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 18px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.doodle-btn {
+  padding: 6px 14px;
+  border: 1.5px solid #eee;
+  background: white;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: #555;
+}
+
+.doodle-btn:hover {
+  background: #fafafa;
+  border-color: #ccc;
+}
+
+.doodle-btn.active {
+  background: #ff7e5f;
+  color: white;
+  border-color: #ff7e5f;
+  box-shadow: 0 2px 5px rgba(255, 126, 95, 0.3);
+}
+
+/* 랜덤일 때 실제로 선택된 항목 강조 */
+.texture-btn.highlight {
+  background: #f0f0ff;
+  border-color: #667eea;
+  border-style: dashed;
+}
+
+.doodle-btn.highlight {
+  background: #fff5f2;
+  border-color: #ff7e5f;
+  border-style: dashed;
+}

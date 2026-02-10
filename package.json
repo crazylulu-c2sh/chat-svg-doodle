@@ -1,0 +1,23 @@
+{
+  "name": "chat-svg-doodle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazylulu-c2sh/chat-svg-doodle.git"
+  },
+  "author": "crazylulu-c2sh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazylulu-c2sh/chat-svg-doodle/issues"
+  },
+  "homepage": "https://github.com/crazylulu-c2sh/chat-svg-doodle#readme"
+}

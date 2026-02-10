@@ -1,22 +1,7 @@
 [
-  {
-    "name": "아이폰",
-    "path": "doodle_01.svg"
-  },
-  {
-    "name": "고양이",
-    "path": "doodle_02.svg"
-  },
-  {
-    "name": "햄버거",
-    "path": "doodle_03.svg"
-  },
-  {
-    "name": "우산",
-    "path": "doodle_04.svg"
-  },
-  {
-    "name": "시계",
-    "path": "doodle_05.svg"
-  }
+  {"name": "아이폰", "path": "assets/doodle_01.svg"},
+  {"name": "고양이", "path": "assets/doodle_02.svg"},
+  {"name": "햄버거", "path": "assets/doodle_03.svg"},
+  {"name": "우산", "path": "assets/doodle_04.svg"},
+  {"name": "시계", "path": "assets/doodle_05.svg"}
 ]
